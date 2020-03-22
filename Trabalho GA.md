@@ -74,7 +74,14 @@ n
 ![](img/3A.png)
 
 (b) {w | o sufixo de w é 000 }
+
+![](img/3b.png)
+
 (c) {w | o terceiro símbolo da direita para a esquerda de w é 1 }
+
+![](img/3c.png)
+
+
 4. Crie autômatos finitos não-determinísticos, com ou sem movimentos vazios, que reconheçam as
 seguintes linguagens sobre o alfabeto ∑={a, b} :
 (a) {w1w2w1 | w2 é qualquer palavra e |w1| = 3 }
