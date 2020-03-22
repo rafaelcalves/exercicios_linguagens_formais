@@ -1,8 +1,9 @@
 ---
+attachments: [3A.png, Clipboard_2020-03-21-23-15-27.png]
 tags: [Unisinos/2020/1/Linguagens Formais]
 title: Trabalho GA
 created: '2020-03-21T19:41:39.359Z'
-modified: '2020-03-21T23:25:44.550Z'
+modified: '2020-03-22T02:17:00.780Z'
 ---
 
 # Trabalho GA
@@ -69,6 +70,9 @@ n
 3. Crie autômatos finitos determinísticos que reconheçam as seguintes linguagens sobre o alfabeto
 ∑={0, 1} :
 (a) {w | w possui 111 como subpalavra }
+
+![](img/3A.png)
+
 (b) {w | o sufixo de w é 000 }
 (c) {w | o terceiro símbolo da direita para a esquerda de w é 1 }
 4. Crie autômatos finitos não-determinísticos, com ou sem movimentos vazios, que reconheçam as
