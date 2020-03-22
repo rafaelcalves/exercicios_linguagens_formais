@@ -2,62 +2,61 @@
 tags: [Unisinos/2020/1/Linguagens Formais]
 title: Trabalho GA
 created: '2020-03-21T19:41:39.359Z'
-modified: '2020-03-21T22:12:53.735Z'
+modified: '2020-03-21T23:25:44.550Z'
 ---
 
 # Trabalho GA
 #### Alunos: Fabiane Kuhn e Rafael Corrêa
 ## 1. As seguir são apresentadas as regras de produção de uma gramática capaz de gerar uma linguagem de programação muito simples, cujo símbolo inicial é P:
-$P \rightarrow\ LD\ \{LC\}$
-$LD \rightarrow \varepsilon\ |\ D\ LD$
-$D \rightarrow TV;$ 
-$V \rightarrow x\ |\ y$
-$T \rightarrow int | char$ 
-$LC \rightarrow \varepsilon\ |\ C\ LC$
-$C \rightarrow V=E;\ |\ if\ (V)\ \{LC\};\ |\ while\ (V)\ \{LC\};$
-$E \rightarrow V\ |\ N$ 
-$N \rightarrow 0\ |\ 1$
-----------------------------------------------------
+
+$$P \rightarrow\ LD\ \{LC\}$$
+$$LD \rightarrow \varepsilon\ |\ D\ LD$$
+$$D \rightarrow TV;$$
+$$V \rightarrow x\ |\ y$$
+$$T \rightarrow int | char$$
+$$LC \rightarrow \varepsilon\ |\ C\ LC$$
+$$C \rightarrow V=E;\ |\ if\ (V)\ \{LC\};\ |\ while\ (V)\ \{LC\};$$
+$$E \rightarrow V\ |\ N$$ 
+$$N \rightarrow 0\ |\ 1$$
+
 ### Agora construa uma cadeia de derivação para os programas a seguir, gerados pela gramática acima:
 - a) $\{x=1;\}$
-$$
-LD\{\undergroup{LC}\}\ =>\newline 
-LD\{\undergroup{C}\ LC\}\ =>\newline 
-LD\{\undergroup{V}=E;LC\} =>\newline 
-LD\{x=\undergroup{E};LC\}\ =>\newline 
-LD\{x=\undergroup{N};LC\} =>\newline 
-\undergroup{LD}\{x=1;LC\} =>\newline 
-\{x=1;\undergroup{LC}\}\ =>\newline 
-\underbrace{\{x=1;\}}
-$$
+
+$$LD\{\undergroup{LC}\}\ =>$$
+$$LD\{\undergroup{C}\ LC\}\ =>$$
+$$LD\{\undergroup{V}=E;LC\} =>$$
+$$LD\{x=\undergroup{E};LC\}\ =>$$
+$$LD\{x=\undergroup{N};LC\} =>$$
+$$\undergroup{LD}\{x=1;LC\} =>$$
+$$\{x=1;\undergroup{LC}\}\ =>$$
+$$\underbrace{\{x=1;\}}$$
 
 - b) $int\ x;\ int\ y;\ \{if\ (x)\ \{y=0\};\ x=1;\}$
-$$
-LD\{\undergroup{LC}\}\ =>\newline
-LD\{\undergroup{C}\ LC\}\ =>\newline
-LD\{if\ (\undergroup{V})\{LC\};\ LC\}\ =>\newline
-LD\{if\ (x)\{\undergroup{LC}\};\ LC\}\ =>\newline 
-LD\{if\ (x)\{\undergroup{C}\ LC\};\ LC\}\ =>\newline 
-LD\{if\ (x)\{y=\undergroup{E};\ LC\};\ LC\}\ =>\newline 
-LD\{if\ (x)\{y=\undergroup{N};\ LC\};\ LC\}\ =>\newline 
-LD\{if\ (x)\{y=0\ \undergroup{LC}\};\ LC\}\ =>\newline 
-LD\{if\ (x)\{y=0;\};\ \undergroup{LC}\}\ =>\newline 
-LD\{if\ (x)\{y=0;\};\ \undergroup{C}\ LC\}\ =>\newline 
-LD\{if\ (x)\{y=0;\};\ \undergroup{V}=E;\ LC\}\ =>\newline
-LD\{if\ (x)\{y=0;\};\ x=\undergroup{E};\ LC\}\ =>\newline
-LD\{if\ (x)\{y=0;\};\ x=\undergroup{N};\ LC\}\ =>\newline
-LD\{if\ (x)\{y=0;\};\ x=1;\ \undergroup{LC}\}\ =>\newline
-\undergroup{LD}\{if\ (x)\{y=0;\};\ x=1;\}\ =>\newline
-\undergroup{D}\ LD\{if\ (x)\{y=0;\};\ x=1;\}\ =>\newline
-\undergroup{T}V;\ LD\{if\ (x)\{y=0;\};\ x=1;\}\ =>\newline
-int\ \undergroup{V};\ LD\{if\ (x)\{y=0;\};\ x=1;\}\ =>\newline
-int\ x;\ \undergroup{LD}\{if\ (x)\{y=0;\};\ x=1;\}\ =>\newline
-int\ x;\ \undergroup{D}\ LD\{if\ (x)\{y=0;\};\ x=1;\}\ =>\newline
-int\ x;\ \undergroup{T}V;\ LD\{if\ (x)\{y=0;\};\ x=1;\}\ =>\newline
-int\ x;\ int\ \undergroup{V};\ LD\{if\ (x)\{y=0;\};\ x=1;\}\ =>\newline
-int\ x;\ int\ y;\ LD\{if\ (x)\{y=0;\};\ x=1;\}\ =>\newline
-\underbrace{int\ x;\ int\ y;\ \{if\ (x)\{y=0;\};\ x=1;\}}
-$$
+
+$$LD\{\undergroup{LC}\}\ =>$$
+$$LD\{\undergroup{C}\ LC\}\ =>$$
+$$LD\{if\ (\undergroup{V})\{LC\};\ LC\}\ =>$$
+$$LD\{if\ (x)\{\undergroup{LC}\};\ LC\}\ =>$$
+$$LD\{if\ (x)\{\undergroup{C}\ LC\};\ LC\}\ =>$$
+$$LD\{if\ (x)\{y=\undergroup{E};\ LC\};\ LC\}\ =>$$
+$$LD\{if\ (x)\{y=\undergroup{N};\ LC\};\ LC\}\ =>$$
+$$LD\{if\ (x)\{y=0\ \undergroup{LC}\};\ LC\}\ =>$$
+$$LD\{if\ (x)\{y=0;\};\ \undergroup{LC}\}\ =>$$
+$$LD\{if\ (x)\{y=0;\};\ \undergroup{C}\ LC\}\ =>$$
+$$LD\{if\ (x)\{y=0;\};\ \undergroup{V}=E;\ LC\}\ =>$$
+$$LD\{if\ (x)\{y=0;\};\ x=\undergroup{E};\ LC\}\ =>$$
+$$LD\{if\ (x)\{y=0;\};\ x=\undergroup{N};\ LC\}\ =>$$
+$$LD\{if\ (x)\{y=0;\};\ x=1;\ \undergroup{LC}\}\ =>$$
+$$\undergroup{LD}\{if\ (x)\{y=0;\};\ x=1;\}\ =>$$
+$$\undergroup{D}\ LD\{if\ (x)\{y=0;\};\ x=1;\}\ =>$$
+$$\undergroup{T}V;\ LD\{if\ (x)\{y=0;\};\ x=1;\}\ =>$$
+$$int\ \undergroup{V};\ LD\{if\ (x)\{y=0;\};\ x=1;\}\ =>$$
+$$int\ x;\ \undergroup{LD}\{if\ (x)\{y=0;\};\ x=1;\}\ =>$$
+$$int\ x;\ \undergroup{D}\ LD\{if\ (x)\{y=0;\};\ x=1;\}\ =>$$
+$$int\ x;\ \undergroup{T}V;\ LD\{if\ (x)\{y=0;\};\ x=1;\}\ =>$$
+$$int\ x;\ int\ \undergroup{V};\ LD\{if\ (x)\{y=0;\};\ x=1;\}\ =>$$
+$$int\ x;\ int\ y;\ LD\{if\ (x)\{y=0;\};\ x=1;\}\ =>$$
+$$\underbrace{int\ x;\ int\ y;\ \{if\ (x)\{y=0;\};\ x=1;\}}$$
 
 
 2. Crie uma gramática para a linguagem {a
