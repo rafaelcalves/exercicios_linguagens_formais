@@ -3,7 +3,7 @@ attachments: [3A.png, Clipboard_2020-03-21-23-15-27.png]
 tags: [Unisinos/2020/1/Linguagens Formais]
 title: Trabalho GA
 created: '2020-03-21T19:41:39.359Z'
-modified: '2020-03-22T02:17:00.780Z'
+modified: '2020-03-27T18:44:30.404Z'
 ---
 
 # Trabalho GA
@@ -60,29 +60,33 @@ $$int\ x;\ int\ y;\ LD\{if\ (x)\{y=0;\};\ x=1;\}\ =>$$
 $$\underbrace{int\ x;\ int\ y;\ \{if\ (x)\{y=0;\};\ x=1;\}}$$
 
 
-2. Crie uma gramática para a linguagem {a
-n
-b
-n
-c
-n
- | n≥0}
-3. Crie autômatos finitos determinísticos que reconheçam as seguintes linguagens sobre o alfabeto
-∑={0, 1} :
-(a) {w | w possui 111 como subpalavra }
+## 2. Crie uma gramática para a linguagem $\{a^n b^n c^n\ |\ n≥0\}$
 
-![](img/3A.png)
+$$S\ \rightarrow\ X$$
+$$X\ \rightarrow\ A\ |\ \varepsilon$$
+$$A\ \rightarrow\ aB$$
+$$B\ \rightarrow\ bc$$
+$$a\ \rightarrow\ aA$$
+$$Bb\ \rightarrow\ bB$$
 
-(b) {w | o sufixo de w é 000 }
+## 3. Crie autômatos finitos determinísticos que reconheçam as seguintes linguagens sobre o alfabeto $∑=\{0,1\}$:
+- a) $\{w\ |\ w\ possui\ 111\ com\ subpalavra\}$
+
+![](img/3a.png)
+
+- b) $\{w\ |\ o\ sufixo\ de\ w\ é\ 000\}$
 
 ![](img/3b.png)
 
-(c) {w | o terceiro símbolo da direita para a esquerda de w é 1 }
+- c) $\{w\ |\ o\ terceiro\ símbolo\ da\ direita\ para\ a\ esquerda\ de\ w\ é\ 1\}$
 
 ![](img/3c.png)
 
+## 4. Crie autômatos finitos não-determinísticos, com ou sem movimentos vazios, que reconheçam as seguintes linguagens sobre o alfabeto $∑=\{a, b\}$:
+- a) $\{w1w2w1\ |\ w2\ é\ qualquer\ palavra\ e\ |w1|=3\}$
 
-4. Crie autômatos finitos não-determinísticos, com ou sem movimentos vazios, que reconheçam as
-seguintes linguagens sobre o alfabeto ∑={a, b} :
-(a) {w1w2w1 | w2 é qualquer palavra e |w1| = 3 }
-(b) {w | o décimo símbolo da direita para esquerda de w é a }
+![](img/4a.png)
+
+- b) $\{w\ |\ o\ décimo\ símbolo\ da\ direita\ para\ esquerda\ de\ w\ é\ a\}$
+
+![](img/4b.png)
