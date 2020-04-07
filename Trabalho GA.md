@@ -3,7 +3,7 @@ attachments: [3A.png, Clipboard_2020-03-21-23-15-27.png]
 tags: [Unisinos/2020/1/Linguagens Formais]
 title: Trabalho GA
 created: '2020-03-21T19:41:39.359Z'
-modified: '2020-03-27T18:44:30.404Z'
+modified: '2020-04-07T20:20:30.404Z'
 ---
 
 # Trabalho GA
